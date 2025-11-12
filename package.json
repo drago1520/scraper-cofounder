@@ -12,14 +12,8 @@
     "lint": "next lint",
     "prepare": "husky",
     "format": "npx prettier src/ --write --ignore-unknown",
-    "@Descr db:sync": "Migrate both Production & Local DB. Alias.",
-    "db:sync": "(npm run db:push) && (npm run db:push:prod)",
     "@Descr db:push": "Push changes to Local DB. Generates migrations and applies them.",
-    "db:push": "cross-env NODE_ENV=development drizzle-kit push --verbose",
-    "@Descr db:push:prod": "Push changes to Production DB",
-    "db:push:prod": "cross-env NODE_ENV=production drizzle-kit push --verbose",
-    "db:studio": "cross-env NODE_ENV=development drizzle-kit studio --verbose",
-    "db:studio:prod": "cross-env NODE_ENV=production drizzle-kit studio --verbose --port 8084"
+    "db:push": "cross-env NODE_ENV=development drizzle-kit push --verbose"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
